@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV · Computer Engineer</title>
-  <!-- Font Awesome 5 (free) -->
+  <title>Nurul Izzuanie · Electronic Engineer</title>
+  <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
@@ -14,7 +14,7 @@
     }
 
     body {
-      background-color: #f8f5f2;
+      background: #f0f4f8;
       font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
       display: flex;
       justify-content: center;
@@ -23,80 +23,121 @@
       padding: 2rem 1.5rem;
     }
 
-    .cv-card {
+    /* MAIN CARD – two-tone: deep teal + soft peach */
+    .resume-card {
       max-width: 1100px;
       width: 100%;
-      background-color: #ffffff;
-      border-radius: 32px;
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.25);
+      background: #ffffff;
+      border-radius: 36px;
+      box-shadow: 0 25px 50px -12px rgba(0, 20, 30, 0.3);
       overflow: hidden;
       display: grid;
       grid-template-columns: 1fr 2.2fr;
       transition: all 0.2s ease;
     }
 
-    /* ---------- LEFT PANEL · PINK & BLACK ---------- */
+    /* ---------- LEFT PANEL · DEEP TEAL (accent with peach) ---------- */
     .left-panel {
-      background-color: #1e1a1a;    /* deep black base */
-      color: #f0ece9;
+      background: #0f2a33;      /* deep teal / dark cyan */
+      color: #e7f0f2;
       padding: 2.2rem 1.8rem;
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      border-right: 4px solid #f28b9c; /* pink accent */
+      border-right: 4px solid #f7c9b0; /* soft peach accent */
     }
 
-    .profile-section {
-      border-bottom: 2px solid #f28b9c40;
+    /* profile header */
+    .profile-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 2px solid #f7c9b060;
       padding-bottom: 1.5rem;
     }
 
-    .name-title h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      color: #f5d6dd;         /* soft pinkish white */
-      margin-bottom: 0.3rem;
+    .avatar-icon {
+      font-size: 5rem;
+      color: #f7c9b0;
+      background: #1a3b46;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid #f7c9b0;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+      margin-bottom: 1rem;
     }
 
-    .name-title .badge {
-      display: inline-block;
-      background: #f28b9c;
-      color: #1e1a1a;
+    .profile-header h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #f7e3d8;
+      line-height: 1.2;
+    }
+
+    .profile-header .subhead {
+      background: #f7c9b0;
+      color: #0f2a33;
       font-weight: 600;
       font-size: 0.75rem;
-      padding: 0.3rem 1rem;
+      padding: 0.35rem 1.2rem;
       border-radius: 40px;
-      letter-spacing: 0.3px;
-      margin-top: 0.2rem;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
+      margin-top: 0.3rem;
+      display: inline-block;
     }
 
     .summary {
       font-size: 0.9rem;
       line-height: 1.5;
-      color: #d0cbc8;
+      color: #cbdce1;
       margin-top: 0.8rem;
+      text-align: left;
     }
 
     .section-title {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       font-weight: 600;
-      color: #f28b9c;
-      margin-bottom: 1.2rem;
-      border-bottom: 1.5px solid #f28b9c30;
+      color: #f7c9b0;
+      margin-bottom: 1rem;
+      border-bottom: 1.5px solid #f7c9b040;
       padding-bottom: 0.5rem;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .section-title i {
       font-size: 1rem;
+      width: 1.6rem;
+      color: #f7c9b0;
+    }
+
+    .info-item {
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .info-item i {
       width: 1.4rem;
-      color: #f28b9c;
+      color: #f7c9b0;
+      font-size: 0.9rem;
+    }
+
+    .info-item strong {
+      color: #f0f7fa;
+      font-weight: 500;
     }
 
     .skill-tags {
@@ -107,93 +148,73 @@
     }
 
     .skill-tag {
-      background: #2a2525;
-      color: #f0eae6;
-      padding: 0.3rem 0.9rem;
+      background: #1a3b46;
+      color: #e7f0f2;
+      padding: 0.25rem 1rem;
       border-radius: 40px;
       font-size: 0.7rem;
       font-weight: 500;
-      border: 1px solid #f28b9c30;
+      border: 1px solid #f7c9b040;
       transition: 0.15s;
     }
 
     .skill-tag:hover {
-      background: #f28b9c;
-      color: #1e1a1a;
-      border-color: #f28b9c;
-    }
-
-    .info-item {
-      margin-bottom: 0.7rem;
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      font-size: 0.85rem;
-    }
-
-    .info-item i {
-      width: 1.4rem;
-      color: #f28b9c;
-      font-size: 0.9rem;
-    }
-
-    .info-item strong {
-      color: #f0eae6;
-      font-weight: 500;
+      background: #f7c9b0;
+      color: #0f2a33;
+      border-color: #f7c9b0;
     }
 
     .ref-item {
-      background: #2a2525;
+      background: #1a3b46;
       padding: 0.9rem 1rem;
       border-radius: 16px;
-      border-left: 4px solid #f28b9c;
+      border-left: 4px solid #f7c9b0;
       font-size: 0.8rem;
       line-height: 1.5;
-      margin-bottom: 0.8rem;
     }
 
     .ref-item .name {
-      color: #f5d6dd;
+      color: #f7e3d8;
       font-weight: 600;
     }
 
-    .ref-item .email {
-      color: #b0a8a3;
+    .ref-item .email, .ref-item .phone {
+      color: #b8cfd6;
       font-size: 0.7rem;
       word-break: break-all;
     }
 
-    .cert-item {
-      background: #2a2525;
-      padding: 0.4rem 0.9rem;
+    .achievement-badge {
+      background: #1a3b46;
+      padding: 0.3rem 1rem;
       border-radius: 30px;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       display: inline-block;
       margin: 0.15rem 0.2rem;
-      border: 1px solid #f28b9c20;
+      border: 1px solid #f7c9b050;
     }
 
-    /* ---------- RIGHT PANEL · WHITE / LIGHT ---------- */
+    /* ---------- RIGHT PANEL · SOFT PEACH / CREAM ---------- */
     .right-panel {
-      background: #fcfaf9;
+      background: #fef9f5;      /* warm off-white */
       padding: 2.2rem 2.2rem 2.2rem 2rem;
     }
 
     .right-panel .section-title {
-      color: #1e1a1a;
-      border-bottom: 2px solid #f28b9c60;
-      margin-top: 0.8rem;
+      color: #0f2a33;
+      border-bottom: 2px solid #f7c9b080;
+      margin-top: 0.5rem;
     }
 
     .right-panel .section-title i {
-      color: #f28b9c;
+      color: #d48466; /* deeper peach for contrast */
     }
 
-    .exp-item, .project-item, .edu-item {
+    .exp-item, .edu-item {
       margin-bottom: 1.5rem;
     }
 
-    .exp-header, .project-header, .edu-header {
+    .exp-header, .edu-header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -201,30 +222,30 @@
       margin-bottom: 0.2rem;
     }
 
-    .exp-header h4, .project-header h4, .edu-header h4 {
+    .exp-header h4, .edu-header h4 {
       font-weight: 600;
       font-size: 1rem;
-      color: #1e1a1a;
+      color: #0f2a33;
       letter-spacing: -0.2px;
     }
 
-    .exp-header .org, .project-header .tech {
+    .exp-header .org, .edu-header .inst {
       font-weight: 500;
-      color: #f28b9c;
+      color: #d48466;
       font-size: 0.8rem;
     }
 
     .exp-header .date, .edu-header .date {
       font-size: 0.7rem;
-      color: #6f6a67;
-      background: #f0eae6;
-      padding: 0.15rem 0.7rem;
+      color: #6f7e86;
+      background: #f0e6df;
+      padding: 0.15rem 0.8rem;
       border-radius: 50px;
     }
 
     .exp-desc {
       font-size: 0.85rem;
-      color: #2d2826;
+      color: #2d3a40;
       line-height: 1.5;
       margin-top: 0.25rem;
       padding-left: 0.2rem;
@@ -245,283 +266,258 @@
       content: "▹";
       position: absolute;
       left: 0;
-      color: #f28b9c;
+      color: #d48466;
       font-weight: 600;
-    }
-
-    .project-item {
-      border-bottom: 1px solid #f0eae6;
-      padding-bottom: 1rem;
-    }
-
-    .project-item:last-child {
-      border-bottom: 0;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .project-item .proj-title {
-      font-weight: 600;
-      color: #1e1a1a;
-    }
-
-    .project-item .proj-desc {
-      font-size: 0.82rem;
-      color: #3e3835;
-      margin-top: 0.15rem;
     }
 
     .edu-item .edu-detail {
       font-size: 0.85rem;
-      color: #2d2826;
+      color: #2d3a40;
     }
 
     .edu-item .edu-detail span {
-      background: #f5edeb;
+      background: #f0e6df;
       padding: 0.1rem 0.8rem;
       border-radius: 40px;
       font-weight: 500;
       font-size: 0.7rem;
-      color: #1e1a1a;
+      color: #0f2a33;
     }
 
-    .award-badge {
+    .award-tag {
       display: inline-block;
-      background: #f28b9c20;
-      border: 1px solid #f28b9c60;
+      background: #f7c9b030;
+      border: 1px solid #d4846660;
       border-radius: 40px;
-      padding: 0.15rem 1rem;
+      padding: 0.15rem 1.2rem;
       font-size: 0.7rem;
       font-weight: 500;
-      color: #1e1a1a;
+      color: #0f2a33;
       margin-right: 0.3rem;
       margin-bottom: 0.3rem;
     }
 
-    .lang-item {
-      display: inline-block;
-      background: #1e1a1a;
-      color: #f5d6dd;
-      padding: 0.2rem 1.2rem;
-      border-radius: 40px;
-      font-size: 0.7rem;
-      margin-right: 0.5rem;
-      font-weight: 500;
+    .footer-note {
+      margin-top: 2rem;
+      border-top: 1px solid #f0e6df;
+      padding-top: 0.8rem;
+      font-size: 0.65rem;
+      color: #6f7e86;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .right-panel .lang-item {
-      background: #f0eae6;
-      color: #1e1a1a;
-      border: 1px solid #d0cbc8;
+    .footer-note i {
+      color: #d48466;
     }
 
     /* responsive */
     @media (max-width: 800px) {
-      .cv-card {
+      .resume-card {
         grid-template-columns: 1fr;
       }
       .left-panel {
         border-right: 0;
-        border-bottom: 4px solid #f28b9c;
+        border-bottom: 4px solid #f7c9b0;
       }
       .right-panel {
         padding: 1.8rem;
       }
+      .avatar-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+      }
     }
 
     @media (max-width: 480px) {
-      .cv-card {
+      .resume-card {
         border-radius: 20px;
       }
-      .left-panel {
+      .left-panel, .right-panel {
         padding: 1.5rem 1.2rem;
       }
-      .right-panel {
-        padding: 1.5rem 1.2rem;
-      }
-    }
-
-    /* scroll / small tweaks */
-    .skill-tags .skill-tag {
-      font-size: 0.65rem;
-    }
-
-    .ref-item .email {
-      font-size: 0.65rem;
-    }
-
-    .two-tone-accent {
-      color: #f28b9c;
-    }
-
-    .highlight-pink {
-      background: #f28b9c10;
-      border-radius: 8px;
-      padding: 0.1rem 0.4rem;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px solid #f0eae6;
-      margin: 0.8rem 0;
     }
   </style>
 </head>
 <body>
-<div class="cv-card">
-  <!-- LEFT PANEL: PINK & BLACK -->
+<div class="resume-card">
+  <!-- LEFT PANEL · DEEP TEAL + PEACH ACCENTS -->
   <div class="left-panel">
-    <div class="profile-section">
-      <div class="name-title">
-        <h1>Danish<br/>Ahmad</h1>
-        <span class="badge"><i class="fas fa-graduation-cap" style="margin-right: 6px;"></i>Computer Engineer</span>
+    <div class="profile-header">
+      <div class="avatar-icon">
+        <i class="fas fa-user-circle"></i>
       </div>
+      <h1>Nurul Izzuanie<br/>Binti Idris</h1>
+      <span class="subhead"><i class="fas fa-microchip" style="margin-right: 6px;"></i>Electronic Engineering</span>
       <div class="summary">
-        <i class="fas fa-quote-left" style="color: #f28b9c; opacity: 0.5; font-size: 0.8rem; margin-right: 4px;"></i>
-        Motivated Computer Engineering graduate with strong interests in software, embedded systems, IoT & AI.
+        <i class="fas fa-quote-left" style="color: #f7c9b0; opacity: 0.5; margin-right: 4px;"></i>
+        Motivated and hardworking individual with strong team spirit, seeking to apply skills and gain further experience; committed to continuous learning and professional growth.
       </div>
     </div>
 
-    <!-- CONTACT / INFO -->
+    <!-- CONTACT -->
     <div>
       <div class="section-title"><i class="fas fa-address-card"></i> Contact</div>
-      <div class="info-item"><i class="fas fa-map-pin"></i> <strong>Malaysia</strong></div>
-      <div class="info-item"><i class="fas fa-envelope"></i> danish.ahmad@email.com</div>
-      <div class="info-item"><i class="fas fa-phone-alt"></i> +60 12-345 6789</div>
+      <div class="info-item"><i class="fas fa-map-pin"></i> <strong>Kedah, Alor Setar</strong></div>
+      <div class="info-item"><i class="fas fa-phone-alt"></i> +601118872467</div>
+      <div class="info-item"><i class="fas fa-envelope"></i> nizzuanie07@gmail.com</div>
     </div>
 
     <!-- SKILLS -->
     <div>
-      <div class="section-title"><i class="fas fa-code"></i> Technical skills</div>
+      <div class="section-title"><i class="fas fa-code"></i> Skills</div>
       <div class="skill-tags">
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">C++</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">HTML/CSS</span>
-        <span class="skill-tag">GitHub</span>
-        <span class="skill-tag">VS Code</span>
-        <span class="skill-tag">Arduino IDE</span>
-        <span class="skill-tag">MATLAB</span>
-        <span class="skill-tag">Proteus</span>
-        <span class="skill-tag">ESP32</span>
-        <span class="skill-tag">ESP8266</span>
-        <span class="skill-tag">Arduino Uno</span>
-        <span class="skill-tag">Raspberry Pi</span>
-        <span class="skill-tag">MySQL</span>
-        <span class="skill-tag">Firebase</span>
+        <span class="skill-tag">Advanced slide design</span>
+        <span class="skill-tag">Intermediate Excel</span>
+        <span class="skill-tag">Advanced Word</span>
+        <span class="skill-tag">Advanced communication</span>
+        <span class="skill-tag">Team cooperation</span>
+        <span class="skill-tag">Customer care</span>
+        <span class="skill-tag">Advanced soldering</span>
+        <span class="skill-tag">Fundamental wiring</span>
+        <span class="skill-tag">Introductory AutoCAD</span>
       </div>
     </div>
 
-    <!-- LANGUAGES -->
+    <!-- ACHIEVEMENTS -->
     <div>
-      <div class="section-title"><i class="fas fa-language"></i> Languages</div>
+      <div class="section-title"><i class="fas fa-trophy"></i> Achievements</div>
       <div>
-        <span class="lang-item">Malay</span>
-        <span class="lang-item">English</span>
+        <span class="achievement-badge"><i class="fas fa-medal" style="color: #f7c9b0; margin-right: 6px;"></i>Gold Medal · FYP (Diploma)</span>
       </div>
     </div>
 
-    <!-- CERTIFICATIONS -->
-    <div>
-      <div class="section-title"><i class="fas fa-award"></i> Certifications</div>
-      <div>
-        <span class="cert-item"><i class="fas fa-certificate" style="color: #f28b9c; margin-right: 4px;"></i> Dean's Award (S2,4,6)</span>
-        <span class="cert-item"><i class="fas fa-medal" style="color: #f28b9c; margin-right: 4px;"></i> Gold Medal · UniMAP 2024</span>
-        <span class="cert-item"><i class="fas fa-network-wired"></i> Cisco Networking Essentials</span>
-        <span class="cert-item"><i class="fas fa-chart-bar"></i> Google Data Analytics</span>
-      </div>
-    </div>
-
-    <!-- REFERENCE -->
+    <!-- REFERENCES -->
     <div>
       <div class="section-title"><i class="fas fa-user-tie"></i> Reference</div>
       <div class="ref-item">
-        <div class="name">Ts. Dr. Ahmad Faizal Bin Mohd Noor</div>
-        <div style="font-size: 0.7rem; color: #c0b8b3;">Senior Lecturer, School of Computer Engineering, UniMAP</div>
-        <div class="email"><i class="fas fa-envelope" style="color: #f28b9c; width: 1.2rem;"></i> faizal@unimap.edu.my</div>
+        <div class="name">Madam Sarah Binti Jewahid</div>
+        <div style="font-size: 0.7rem; color: #b8cfd6;">Academic Advisor, Dept. of Electrical Engineering</div>
+        <div class="phone"><i class="fas fa-phone" style="color: #f7c9b0; width: 1.2rem;"></i> +60172252937</div>
+        <div class="email"><i class="fas fa-envelope" style="color: #f7c9b0; width: 1.2rem;"></i> sarahjewahid@gmail.com</div>
       </div>
     </div>
   </div>
 
-  <!-- RIGHT PANEL: WHITE / LIGHT -->
+  <!-- RIGHT PANEL · SOFT PEACH / CREAM -->
   <div class="right-panel">
     <!-- EDUCATION -->
     <div>
-      <div class="section-title"><i class="fas fa-university"></i> Education</div>
+      <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
       <div class="edu-item">
         <div class="edu-header">
-          <h4>Universiti Malaysia Perlis (UniMAP)</h4>
-          <span class="date">Oct 2021 – Aug 2025</span>
+          <h4>University Malaysia Perlis</h4>
+          <span class="date">Sep 2024</span>
         </div>
         <div class="edu-detail">
-          Bachelor of Computer Engineering (Hons.)  ·  <span>CGPA 3.78</span>
+          Bachelor of Technology in Electronic Engineering (Electronic System) with Honour
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-header">
+          <h4>Politeknik Tuanku Syed Sirajuddin, Perlis</h4>
+          <span class="date">Jun 2020 – Aug 2023</span>
+        </div>
+        <div class="edu-detail">
+          Diploma in Electronic Engineering (Communication)
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-header">
+          <h4>Sekolah Menengah Kebangsaan Mergong, Kedah</h4>
+          <span class="date">Jan 2015 – Dec 2019</span>
+        </div>
+        <div class="edu-detail">
+          Sijil Pelajaran Malaysia (SPM)
         </div>
       </div>
     </div>
 
-    <!-- WORK EXPERIENCE -->
+    <!-- EXPERIENCE -->
     <div>
       <div class="section-title"><i class="fas fa-briefcase"></i> Experience</div>
+
       <div class="exp-item">
         <div class="exp-header">
-          <h4>Intel Technology Malaysia Sdn. Bhd.</h4>
-          <span class="date">Feb 2025 – Aug 2025</span>
+          <h4>Print Shop Assistant</h4>
+          <span class="date">Jan 2023 – Jun 2023</span>
         </div>
-        <div class="exp-header" style="margin-bottom: 0.3rem;">
-          <span class="org"><i class="fas fa-map-marker-alt" style="color: #f28b9c;"></i> Penang</span>
-          <span style="font-size: 0.7rem; background: #f0eae6; padding: 0.1rem 0.8rem; border-radius: 40px;">Internship</span>
+        <div class="exp-header" style="margin-bottom: 0.2rem;">
+          <span class="org"><i class="fas fa-store"></i> Summer Trading Co.</span>
         </div>
         <div class="exp-desc">
           <ul>
-            <li>Assisted engineers in automated testing activities.</li>
-            <li>Supported production data analysis and reporting.</li>
-            <li>Participated in IoT-based predictive maintenance projects.</li>
-            <li>Prepared technical documentation and reports.</li>
+            <li>Prepped print jobs by loading paper, ink, and checking settings.</li>
+            <li>Assisted customers with print orders, offering guidance on products.</li>
+            <li>Scanned and digitized customer documents for print or archival needs.</li>
+            <li>Managed inventory of paper, ink, and shop supplies efficiently.</li>
+            <li>Trimmed, folded, and bound finished print jobs as required.</li>
+            <li>Monitored print color consistency during production runs.</li>
+            <li>Assisted walk-in customers with printing and copying tasks.</li>
+            <li>Handled confidential documents with discretion during printing.</li>
+            <li>Set up lamination and finishing equipment for post-print processing.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <h4>Sales Girl</h4>
+          <span class="date">Aug 2022 – Jan 2023</span>
+        </div>
+        <div class="exp-header" style="margin-bottom: 0.2rem;">
+          <span class="org"><i class="fas fa-building"></i> KK LINE ONE SDN BHD</span>
+        </div>
+        <div class="exp-desc">
+          <ul>
+            <li>Studied product updates thoroughly to ensure effective customer promotion.</li>
+            <li>Studied UniFi cabling, including fiber and copper.</li>
+            <li>Engaged customers and promoted products to drive interest.</li>
+            <li>Ensured interested customers received clear information on available packages.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <h4>Sales Girl</h4>
+          <span class="date">(earlier)</span>
+        </div>
+        <div class="exp-header" style="margin-bottom: 0.2rem;">
+          <span class="org"><i class="fas fa-store-alt"></i> Shah Butik</span>
+        </div>
+        <div class="exp-desc">
+          <ul>
+            <li>Greeted customers and assisted with product selection and recommendations.</li>
+            <li>Processed sales transactions and handled cash register operations.</li>
+            <li>Restocked inventory and monitored product availability on the floor.</li>
+            <li>Supported store opening and closing procedures as required.</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- PROJECTS -->
-    <div>
-      <div class="section-title"><i class="fas fa-microchip"></i> Projects</div>
-      <div class="project-item">
-        <div class="project-header">
-          <span class="proj-title">Smart Parking Monitoring System</span>
-          <span class="tech"><i class="fas fa-cog"></i> ESP32 · Firebase</span>
-        </div>
-        <div class="proj-desc">IoT-based parking availability monitoring using ESP32 and Firebase.</div>
-      </div>
-      <div class="project-item">
-        <div class="project-header">
-          <span class="proj-title">Student Academic Guidance System</span>
-          <span class="tech"><i class="fas fa-cog"></i> PHP · MySQL</span>
-        </div>
-        <div class="proj-desc">Web-based academic recommendation system using PHP and MySQL.</div>
-      </div>
-      <div class="project-item">
-        <div class="project-header">
-          <span class="proj-title">Smart Home Automation</span>
-          <span class="tech"><i class="fas fa-cog"></i> ESP8266</span>
-        </div>
-        <div class="proj-desc">Remote monitoring and appliance control using ESP8266.</div>
+    <!-- FINAL YEAR PROJECT (FYP) -->
+    <div style="margin-top: 0.5rem;">
+      <div class="section-title"><i class="fas fa-microchip"></i> Final Year Project</div>
+      <div style="background: #f7e9e0; padding: 0.8rem 1.2rem; border-radius: 20px; border-left: 5px solid #d48466;">
+        <div style="font-weight: 600; color: #0f2a33;">Flood Alert Warning System Using LoRa</div>
+        <ul style="list-style: none; padding-left: 0.2rem; margin-top: 0.3rem; font-size: 0.85rem; color: #2d3a40;">
+          <li style="position: relative; padding-left: 1.2rem; margin-bottom: 0.1rem;"><span style="position: absolute; left: 0; color: #d48466;">▹</span> Created project schematics and PCB layouts with Proteus.</li>
+          <li style="position: relative; padding-left: 1.2rem; margin-bottom: 0.1rem;"><span style="position: absolute; left: 0; color: #d48466;">▹</span> Developed embedded system code using Arduino IDE.</li>
+          <li style="position: relative; padding-left: 1.2rem; margin-bottom: 0.1rem;"><span style="position: absolute; left: 0; color: #d48466;">▹</span> Designed detailed project prototypes utilizing SketchUp.</li>
+          <li style="position: relative; padding-left: 1.2rem; margin-bottom: 0.1rem;"><span style="position: absolute; left: 0; color: #d48466;">▹</span> Ensured optimal operation by assembling and testing circuit boards.</li>
+          <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: #d48466;">▹</span> Demonstrated subject expertise through clear documentation & presentation.</li>
+        </ul>
       </div>
     </div>
 
-    <!-- ADDITIONAL AWARDS / recognition -->
-    <div style="margin-top: 1.2rem;">
-      <div class="section-title"><i class="fas fa-trophy" style="color: #f28b9c;"></i> Awards & recognition</div>
-      <div>
-        <span class="award-badge"><i class="fas fa-star" style="color: #f28b9c;"></i> Dean's Award (Sem 2,4,6)</span>
-        <span class="award-badge"><i class="fas fa-medal" style="color: #f28b9c;"></i> Gold Medal · UniMAP Innovation 2024</span>
-      </div>
-    </div>
-
-    <!-- small footer note: two-tone theme -->
-    <div style="margin-top: 2.2rem; border-top: 1px solid #f0eae6; padding-top: 0.8rem; font-size: 0.65rem; color: #6f6a67; display: flex; justify-content: space-between; align-items: center;">
-      <span><i class="fas fa-palette" style="color: #f28b9c;"></i> Pink & Black · Professional CV</span>
-      <span><i class="far fa-file-pdf"></i> Danish_CV</span>
+    <!-- footer -->
+    <div class="footer-note">
+      <span><i class="fas fa-palette"></i> Two‑tone · Teal & Peach</span>
+      <span><i class="far fa-file-pdf"></i> Nurul_Izzuanie_Resume</span>
     </div>
   </div>
 </div>
